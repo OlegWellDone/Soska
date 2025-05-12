@@ -110,7 +110,7 @@ MonoBehaviour:
     TCS: 1
     applyExternalWheelFrictions: 1
     applyRelativeTorque: 1
-    steeringType: 0
+    steeringType: 1
     steeringCurve:
       serializedVersion: 2
       m_Curve:
@@ -126,15 +126,15 @@ MonoBehaviour:
       - serializedVersion: 3
         time: 100
         value: 10
-        inSlope: -0.1285534
-        outSlope: -0.1285534
+        inSlope: -0.057345908
+        outSlope: -0.057345908
         tangentMode: 0
         weightedMode: 0
         inWeight: 0.33333334
-        outWeight: 0.112903215
+        outWeight: 0.11071791
       - serializedVersion: 3
-        time: 200
-        value: 5
+        time: 399.47015
+        value: 5.1651
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -144,14 +144,14 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    comAssister: 2
+    comAssister: 0
     highSpeedSteerAngleMinimum: 0
-    highSpeedSteerAngleMaximum: 60
+    highSpeedSteerAngleMaximum: 720
     highSpeedSteerAngleAtspeedMinimum: 0
-    highSpeedSteerAngleAtspeedMaximum: 350
+    highSpeedSteerAngleAtspeedMaximum: 720
     counterSteeringMinimum: 0.1
     counterSteeringMaximum: 0.5
-    steeringSensitivityMinimum: 0.5
+    steeringSensitivityMinimum: 0.1
     steeringSensitivityMaximum: 1
     steerHelperAngularVelStrengthMinimum: 0.25
     steerHelperAngularVelStrengthMaximum: 1
