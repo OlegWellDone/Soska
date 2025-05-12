@@ -1,11 +1,5 @@
 fileFormatVersion: 2
 guid: dedf8fc214d3c0b429776834f028f3af
-timeCreated: 1508202199
-licenseType: Store
-DefaultImporter:
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
   productId: 6630
@@ -13,3 +7,47 @@ AssetOrigin:
   packageVersion: 1.7
   assetPath: Assets/Logitech SDK/LogitechSteeringWheel.lib
   uploadId: 723636
+PluginImporter:
+  externalObjects: {}
+  serializedVersion: 3
+  iconMap: {}
+  executionOrder: {}
+  defineConstraints: []
+  isPreloaded: 1
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+    Any:
+      enabled: 1
+      settings:
+        Exclude Editor: 1
+        Exclude Linux64: 1
+        Exclude OSXUniversal: 1
+        Exclude Win: 1
+        Exclude Win64: 1
+    Editor:
+      enabled: 0
+      settings:
+        CPU: AnyCPU
+        DefaultValueInitialized: true
+        OS: AnyOS
+    Linux64:
+      enabled: 0
+      settings:
+        CPU: None
+    OSXUniversal:
+      enabled: 0
+      settings:
+        CPU: None
+    Win:
+      enabled: 0
+      settings:
+        CPU: None
+    Win64:
+      enabled: 0
+      settings:
+        CPU: None
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
