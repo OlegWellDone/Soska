@@ -122,7 +122,7 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""name"": ""Handbrake"",
                     ""type"": ""Button"",
                     ""id"": ""862a1da3-327a-425f-bc3a-c144667b0f07"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -131,7 +131,7 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""name"": ""Start/Stop Engine"",
                     ""type"": ""Button"",
                     ""id"": ""665ce79b-380f-460c-954c-a66e8d7f6868"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
@@ -185,7 +185,7 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""name"": ""Indicator Hazard"",
                     ""type"": ""Button"",
                     ""id"": ""2cf3bd64-7349-45c4-bd17-ac5c026c14f3"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
@@ -194,7 +194,7 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""name"": ""Gear Shift Up"",
                     ""type"": ""Button"",
                     ""id"": ""bfed3200-a183-457f-89e2-4728ba190654"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Press"",
                     ""initialStateCheck"": false
@@ -370,7 +370,7 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard Mouse"",
+                    ""groups"": ""Keyboard Mouse;G920"",
                     ""action"": ""Throttle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -409,39 +409,6 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""G29/920"",
-                    ""id"": ""917fc2f9-b027-48ea-a670-9f4f3cb137af"",
-                    ""path"": ""1DAxis(minValue=0)"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Throttle"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""be73745b-397e-4185-9283-ea2f38bf4f84"",
-                    ""path"": ""<Joystick>/stick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""G920"",
-                    ""action"": ""Throttle"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""24631aa9-3d4f-4a4c-9348-c76dc524a7bf"",
-                    ""path"": ""<Joystick>/stick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""G920"",
-                    ""action"": ""Throttle"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": """",
                     ""id"": ""b7f469da-1f0b-4649-a1d2-d5c6795d48b5"",
                     ""path"": ""<OculusTouchController>{RightHand}/trigger"",
@@ -451,6 +418,39 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Throttle"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""121df645-5995-4192-9750-ae6bd7f78c94"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""e25f61f0-54a2-4b61-8c85-b6706a758d16"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad;G920"",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""c2db87ef-4016-4df4-9ae8-5264f0e94482"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Gamepad;G920"",
+                    ""action"": ""Throttle"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""keyboard"",
@@ -521,10 +521,10 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5aaefde0-b9f2-4263-ada8-08c4754560fc"",
-                    ""path"": ""<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button2"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/button2"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""G920"",
+                    ""groups"": ""G920;Gamepad"",
                     ""action"": ""Handbrake"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -539,6 +539,28 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Handbrake"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""G29/920"",
+                    ""id"": ""ea42dd76-8279-4357-8568-5591d76a5189"",
+                    ""path"": ""1DAxis(minValue=0)"",
+                    ""interactions"": """",
+                    ""processors"": ""Scale(factor=2)"",
+                    ""groups"": """",
+                    ""action"": ""Brake"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""c803aabc-d4e4-43bd-8c6f-ada81a3a4ce8"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/rz"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""G920;Gamepad"",
+                    ""action"": ""Brake"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""wasd"",
@@ -651,61 +673,6 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""G29/920"",
-                    ""id"": ""ea42dd76-8279-4357-8568-5591d76a5189"",
-                    ""path"": ""1DAxis(minValue=0)"",
-                    ""interactions"": """",
-                    ""processors"": ""Scale(factor=2)"",
-                    ""groups"": """",
-                    ""action"": ""Brake"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""c803aabc-d4e4-43bd-8c6f-ada81a3a4ce8"",
-                    ""path"": ""<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/z"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""G920"",
-                    ""action"": ""Brake"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""wasd"",
-                    ""id"": ""b84118c6-f280-4827-aec2-23b358ff2839"",
-                    ""path"": ""1DAxis"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Steering"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""Negative"",
-                    ""id"": ""e39a68f9-d10f-4dfb-9c23-4911299ada81"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard Mouse"",
-                    ""action"": ""Steering"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""Positive"",
-                    ""id"": ""95b1dcb4-e179-495b-9829-2441e822fa9c"",
-                    ""path"": ""<Keyboard>/d"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": ""Keyboard Mouse"",
-                    ""action"": ""Steering"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
                     ""name"": ""arrows"",
                     ""id"": ""c9265635-9301-4f28-857f-f8c35c3aeaa3"",
                     ""path"": ""1DAxis"",
@@ -772,12 +739,45 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""wasd"",
+                    ""id"": ""b84118c6-f280-4827-aec2-23b358ff2839"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Steering"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Negative"",
+                    ""id"": ""e39a68f9-d10f-4dfb-9c23-4911299ada81"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard Mouse"",
+                    ""action"": ""Steering"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Positive"",
+                    ""id"": ""95b1dcb4-e179-495b-9829-2441e822fa9c"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard Mouse"",
+                    ""action"": ""Steering"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""a72b71b3-a5a9-476e-ba2f-303039d7d7f9"",
-                    ""path"": ""<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/stick/x"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/stick/x"",
                     ""interactions"": """",
                     ""processors"": ""Scale"",
-                    ""groups"": ""G920"",
+                    ""groups"": "";Gamepad;G920"",
                     ""action"": ""Steering"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -818,10 +818,10 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""29b37afd-bc61-4290-9fdc-dd474f1cb45d"",
-                    ""path"": ""<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button7"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/button7"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""G920"",
+                    ""groups"": ""G920;Gamepad"",
                     ""action"": ""Start/Stop Engine"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -917,10 +917,10 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""e2c9283d-228b-4eed-bb92-7754056bc3cc"",
-                    ""path"": ""<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/hat/right"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/button11"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""G920"",
+                    ""groups"": ""G920;Gamepad"",
                     ""action"": ""Indicator Right"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -950,10 +950,10 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""4dab2970-04c0-4e49-94f3-7f1d66dbda9b"",
-                    ""path"": ""<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/hat/left"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/button12"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""G920"",
+                    ""groups"": ""G920;Gamepad"",
                     ""action"": ""Indicator Left"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -983,10 +983,10 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5ade0cb3-2beb-4419-816f-f881768375b9"",
-                    ""path"": ""<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/hat/up"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/button24"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""G920"",
+                    ""groups"": ""G920;Gamepad"",
                     ""action"": ""Indicator Hazard"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1016,10 +1016,10 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""a515f912-72c4-445d-aa6d-ba6be1069897"",
-                    ""path"": ""<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button5"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/button5"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""G920"",
+                    ""groups"": ""G920;Gamepad"",
                     ""action"": ""Gear Shift Up"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -1060,10 +1060,10 @@ public partial class @RCC_InputActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""5763683e-0147-4154-9e8a-5fc71fd7161c"",
-                    ""path"": ""<HID::Logitech G920 Driving Force Racing Wheel for Xbox One>/button6"",
+                    ""path"": ""<HID::Logitech G923 Racing Wheel for PlayStation 4 and PC>/button6"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""G920"",
+                    ""groups"": ""G920;Gamepad"",
                     ""action"": ""Gear Shift Down"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
