@@ -7,7 +7,6 @@ public class RotatorScript : MonoBehaviour
 
     public RCC_CarControllerV4 vehicle;
     public bool isRpm;
-    public GameObject COM;
 
 private float RPM;
 private float KMH;
@@ -15,8 +14,8 @@ private Quaternion StartQ;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartQ = this.transform.rotation;
-        StartQ.Normalize();
+        StartQ = this.transform.localRotation;
+        //StartQ.Normalize();
     }
 
     // Update is called once per frame
@@ -28,10 +27,11 @@ private Quaternion StartQ;
         //30 градусов, так как 240 градусов всего поворот максимум/ 8к оборотов.
         if (isRpm){
             //this.transform.rotation.eulerAngles.y+StartQ.eulerAngles.y
-            this.transform.rotation = Quaternion.Euler(StartQ.eulerAngles.x - (RPM/1000*30), COM.transform.eulerAngles.y, COM.transform.eulerAngles.z);
+            //this.transform.localEulerAngles = 
+            this.transform.localEulerAngles = new Vector3(StartQ.eulerAngles.x - (RPM/1000*30), StartQ.eulerAngles.y, StartQ.eulerAngles.z);
             //Debug.Log(""+this.transform.rotation);
         }else {
-
+             this.transform.localEulerAngles = new Vector3(StartQ.eulerAngles.x + (KMH/160*1.5f), StartQ.eulerAngles.y, StartQ.eulerAngles.z);
         }
     }
 }

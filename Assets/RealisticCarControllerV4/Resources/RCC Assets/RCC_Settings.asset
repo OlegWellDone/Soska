@@ -101,12 +101,12 @@ MonoBehaviour:
   - behaviorName: Racing
     steeringHelper: 0
     tractionHelper: 0
-    angularDragHelper: 0
+    angularDragHelper: 1
     counterSteering: 1
     limitSteering: 1
     steeringSensitivity: 1
     ABS: 1
-    ESP: 0
+    ESP: 1
     TCS: 1
     applyExternalWheelFrictions: 1
     applyRelativeTorque: 1
