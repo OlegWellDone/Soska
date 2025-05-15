@@ -5939,26 +5939,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3648535413398676425, guid: 2bafa494a8589db4384614dbeb031d64, type: 3}
   m_PrefabInstance: {fileID: 392387568}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &228952429 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3908803646456559332, guid: 2bafa494a8589db4384614dbeb031d64, type: 3}
-  m_PrefabInstance: {fileID: 392387568}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &228952432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 228952428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c78963fbf0ee27f46b25d7cd9c400820, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vehicle: {fileID: 1945252149477871779}
-  isRpm: 1
-  COM: {fileID: 405150016}
 --- !u!1 &238737888
 GameObject:
   m_ObjectHideFlags: 0
@@ -9748,17 +9728,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3908803646456559332, guid: 2bafa494a8589db4384614dbeb031d64, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 405150017}
+    m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2bafa494a8589db4384614dbeb031d64, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1243092450}
-    - targetCorrespondingSourceObject: {fileID: 3648535413398676425, guid: 2bafa494a8589db4384614dbeb031d64, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 228952432}
     - targetCorrespondingSourceObject: {fileID: -3540033254249751745, guid: 2bafa494a8589db4384614dbeb031d64, type: 3}
       insertIndex: -1
       addedObject: {fileID: 370489607}
@@ -10020,37 +9994,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 34034874906e3ca499d49bed4e02cbb6, type: 3}
---- !u!1 &405150016
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 405150017}
-  m_Layer: 8
-  m_Name: COM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &405150017
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 405150016}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 228952429}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423947390
 GameObject:
   m_ObjectHideFlags: 0
@@ -31892,8 +31835,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vehicle: {fileID: 1945252149477871779}
-  isRpm: 0
-  COM: {fileID: 0}
+  hmNeedle: {fileID: 228952428}
+  kmhNeedle: {fileID: 1268801343}
 --- !u!1001 &1243435425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32575,6 +32518,11 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9325886, y: 1.0228589, z: 0.21439967}
   m_Center: {x: 0.0000003576279, y: 0.5126976, z: 0.0000047683716}
+--- !u!1 &1268801343 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -4181239330052462565, guid: 2bafa494a8589db4384614dbeb031d64, type: 3}
+  m_PrefabInstance: {fileID: 392387568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1272864026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -58190,8 +58138,8 @@ MonoBehaviour:
   gearShiftingDelay: 0.361
   gearShiftingThreshold: 0.75
   clutchInertia: 0.25
-  gearShiftUpRPM: 3000
-  gearShiftDownRPM: 1800
+  gearShiftUpRPM: 2000
+  gearShiftDownRPM: 900
   changingGear: 0
   direction: 1
   launched: 0
@@ -58824,7 +58772,7 @@ GameObject:
   - component: {fileID: 5901883815351238546}
   - component: {fileID: 3458161430983581525}
   - component: {fileID: 779755224847877195}
-  m_Layer: 1
+  m_Layer: 8
   m_Name: Lob
   m_TagString: Untagged
   m_Icon: {fileID: 0}

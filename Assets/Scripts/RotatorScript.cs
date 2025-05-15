@@ -6,15 +6,19 @@ public class RotatorScript : MonoBehaviour
 {
 
     public RCC_CarControllerV4 vehicle;
-    public bool isRpm;
+
+    public GameObject hmNeedle;
+    public GameObject kmhNeedle;
 
 private float RPM;
 private float KMH;
-private Quaternion StartQ;
+private Quaternion StartQh;
+private Quaternion StartQk;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartQ = this.transform.localRotation;
+        StartQh = hmNeedle.transform.localRotation;
+        StartQk = kmhNeedle.transform.localRotation;
         //StartQ.Normalize();
     }
 
@@ -25,13 +29,13 @@ private Quaternion StartQ;
         KMH = vehicle.speed;
         //Debug.Log(RPM + " oo " + KMH);
         //30 градусов, так как 240 градусов всего поворот максимум/ 8к оборотов.
-        if (isRpm){
+        
             //this.transform.rotation.eulerAngles.y+StartQ.eulerAngles.y
             //this.transform.localEulerAngles = 
-            this.transform.localEulerAngles = new Vector3(StartQ.eulerAngles.x - (RPM/1000*30), StartQ.eulerAngles.y, StartQ.eulerAngles.z);
-            //Debug.Log(""+this.transform.rotation);
-        }else {
-             this.transform.localEulerAngles = new Vector3(StartQ.eulerAngles.x + (KMH/160*1.5f), StartQ.eulerAngles.y, StartQ.eulerAngles.z);
-        }
+            hmNeedle.transform.localRotation = Quaternion.Euler(StartQh.eulerAngles.x - (RPM/1000*30), StartQh.eulerAngles.y, StartQh.eulerAngles.z);
+            Debug.Log(""+KMH + "  " + StartQk.eulerAngles.x + (KMH));
+        
+            kmhNeedle.transform.localRotation = Quaternion.Euler(StartQk.eulerAngles.x - (KMH*1.7f), StartQk.eulerAngles.y, StartQk.eulerAngles.z);
+        
     }
 }
